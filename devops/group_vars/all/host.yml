@@ -1,0 +1,3 @@
+---
+hostname: 'portal-uft'
+fqdn: '{{ hostname }}.plone.org'
