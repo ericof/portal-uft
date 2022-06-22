@@ -10,35 +10,19 @@ from zope.interface import implementer
 class IPerson(Schema):
     """Schema of a person profile."""
 
-    title = schema.TextLine(
-        title=_(
-            "person_title",
-            default="Fullname"
-        ),
-        required=True
-    )
+    title = schema.TextLine(title=_("person_title", default="Fullname"), required=True)
 
     description = schema.Text(
-        title=_(
-            "person_description",
-            default="Biography"
-        ),
-        required=False
+        title=_("person_description", default="Biography"), required=False
     )
 
-    email = Email(
-        title=_(
-            "person_email",
-            default="E-mail"
-        ),
-        required=True
-    )
+    email = Email(title=_("person_email", default="E-mail"), required=True)
 
     extension = schema.TextLine(
         title=_(
             "Extension",
         ),
-        required=False
+        required=False,
     )
 
 
