@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-25 17:12+0000\n"
+"POT-Creation-Date: 2022-06-22 20:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,3 +13,66 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#: portal_uft/vocabularies/__init__.py:11
+msgid "Education"
+msgstr ""
+
+#: portal_uft/content/person.py:38
+msgid "Extension"
+msgstr ""
+
+#: portal_uft/vocabularies/__init__.py:9
+msgid "Government"
+msgstr ""
+
+#: portal_uft/profiles.zcml:22
+msgid "Initial content for our website."
+msgstr ""
+
+#: portal_uft/vocabularies/__init__.py:10
+msgid "NGO"
+msgstr ""
+
+#: portal_uft/profiles/default/types/person.xml
+msgid "Person"
+msgstr ""
+
+#: portal_uft/profiles/default/types/person.xml
+msgid "Person in the site"
+msgstr ""
+
+#: portal_uft/profiles.zcml:13
+msgid "Policy package to install our site"
+msgstr ""
+
+#: portal_uft/profiles.zcml:22
+msgid "Portal UFT: Initial content"
+msgstr ""
+
+#: portal_uft/profiles.zcml:13
+msgid "Portal UFT: Install"
+msgstr ""
+
+#: portal_uft/profiles.zcml:30
+msgid "Portal UFT: Uninstall"
+msgstr ""
+
+#: portal_uft/profiles.zcml:30
+msgid "Uninstall Portal UFT setup."
+msgstr ""
+
+#. Default: "Biography"
+#: portal_uft/content/person.py:22
+msgid "person_description"
+msgstr ""
+
+#. Default: "E-mail"
+#: portal_uft/content/person.py:30
+msgid "person_email"
+msgstr ""
+
+#. Default: "Fullname"
+#: portal_uft/content/person.py:14
+msgid "person_title"
+msgstr ""
