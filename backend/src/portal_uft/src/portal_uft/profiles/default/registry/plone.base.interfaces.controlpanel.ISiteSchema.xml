@@ -2,8 +2,34 @@
 <registry>
   <records interface="plone.base.interfaces.controlpanel.ISiteSchema"
            prefix="plone"
-           purge="false"
   >
-    <value key="site_title">Portal UFT</value>
+    <value key="default_page">
+      <element>index_html</element>
+      <element>index.html</element>
+      <element>index.htm</element>
+      <element>FrontPage</element>
+    </value>
+    <value key="display_publication_date_in_byline">False</value>
+    <value key="enable_sitemap">True</value>
+    <value key="exposeDCMetaTags">False</value>
+    <value key="icon_visibility">enabled</value>
+    <value key="no_thumbs_lists">False</value>
+    <value key="no_thumbs_portlet">False</value>
+    <value key="no_thumbs_summary">False</value>
+    <value key="no_thumbs_tables">False</value>
+    <value key="roles_allowed_to_add_keywords">
+      <element>Manager</element>
+      <element>Site Administrator</element>
+      <element>Reviewer</element>
+    </value>
+    <value key="site_favicon_mimetype">image/vnd.microsoft.icon</value>
+    <value key="site_title">Portal da UFT</value>
+    <value key="thumb_scale_listing">thumb</value>
+    <value key="thumb_scale_portlet">icon</value>
+    <value key="thumb_scale_summary">mini</value>
+    <value key="thumb_scale_table">tile</value>
+    <value key="thumb_visibility">enabled</value>
+    <value key="toolbar_logo">/++plone++static/plone-toolbarlogo.svg</value>
+    <value key="toolbar_position">side</value>
   </records>
 </registry>
