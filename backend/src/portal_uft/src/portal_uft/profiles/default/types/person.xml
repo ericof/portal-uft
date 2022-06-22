@@ -28,6 +28,7 @@
   <property name="klass">portal_uft.content.person.Person</property>
   <property name="behaviors">
     <element value="plone.shortname" />
+    <element value="plone.leadimage" />
     <element value="plone.namefromtitle" />
   </property>
   <property name="schema">portal_uft.content.person.IPerson</property>

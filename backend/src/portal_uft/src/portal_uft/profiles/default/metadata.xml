@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
-  <version>20220622002</version>
+  <version>20220622003</version>
   <dependencies>
     <dependency>profile-plone.volto:default</dependency>
   </dependencies>

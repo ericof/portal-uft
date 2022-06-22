@@ -14,5 +14,15 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="portal_uft:default"
+      source="20220622002"
+      destination="20220622003"
+      >
+    <genericsetup:upgradeDepends
+        title="Apply lead image behavior to a Person"
+        import_steps="typeinfo"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>
