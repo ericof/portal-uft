@@ -35,9 +35,14 @@ class IPerson(Schema):
     def validate_email(data):
         """Validate email set by the user."""
         value = data.email
+        title = data.title
         if not (value and validators.is_valid_email(value)):
             raise validators.BadValue(
                 f"The email {value} is not in the uft.edu.br domain."
+            )
+        elif not validators.is_valid_username(title, value):
+            raise validators.BadValue(
+                f"The email {value} does not follow our standard."
             )
 
 

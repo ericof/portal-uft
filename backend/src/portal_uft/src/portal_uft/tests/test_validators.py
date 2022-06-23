@@ -48,3 +48,27 @@ class TestExtensionValidator(unittest.TestCase):
         ]
         for value in values:
             self.assertFalse(validators.is_valid_extension(value))
+
+
+class TestUsernameValidator(unittest.TestCase):
+    """Test portal_uft.validators.is_valid_username."""
+
+    def test_valid(self):
+        values = [
+            ("Alex Limi", "alex.limi@uft.edu.br"),
+            ("Alan Runyan", "alan.runyan@uft.edu.br"),
+            ("Foo Bar", "foo.bar@uft.edu.br"),
+        ]
+        for title, email in values:
+            self.assertTrue(validators.is_valid_username(title, email))
+
+    def test_invalid(self):
+        values = [
+            ("Alex Limi", " @uft.edu.br"),
+            ("Alan Runyan", ""),
+            ("Alan Runyan", "runyaga@uft.edu.br"),
+            ("Foo Bar", "foo-bar@uft.edu.br"),
+            ("Foo Bar", "foo@bar@uft.edu.br"),
+        ]
+        for title, email in values:
+            self.assertFalse(validators.is_valid_username(title, email))
