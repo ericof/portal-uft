@@ -1,11 +1,16 @@
 from kitconcept import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from portal_uft import validators
 from portal_uft.content.person import IPerson
 from portal_uft.testing import PORTAL_UFT_INTEGRATION_TESTING
 from zope.component import createObject
 
 import unittest
+
+
+class MockPerson:
+    """Mock of a person."""
 
 
 class PersonIntegrationTest(unittest.TestCase):
@@ -47,3 +52,18 @@ class PersonIntegrationTest(unittest.TestCase):
         )
         self.assertTrue(IPerson.providedBy(obj))
         self.assertEqual(obj, self.portal["alex-limi"])
+
+    def test_invariant_validate_email_invalid(self):
+        data = MockPerson()
+        data.title = "Alex Limi"
+        data.email = "limi@uft.edu.br"
+        try:
+            IPerson.validateInvariants(data)
+        except validators.BadValue:
+            pass
+
+    def test_invariant_validate_email_valid(self):
+        data = MockPerson()
+        data.title = "Alex Limi"
+        data.email = "alex.limi@uft.edu.br"
+        IPerson.validateInvariants(data)
