@@ -1,5 +1,14 @@
 """Validators."""
+from portal_uft import _
+from zope.interface import Invalid
+
 import re
+
+
+class BadValue(Invalid):
+    """Exception raised when a provided value is informed."""
+
+    __doc__ = _("The value is not correct")
 
 
 def is_valid_email(value: str) -> bool:

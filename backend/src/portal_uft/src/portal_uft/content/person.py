@@ -6,6 +6,7 @@ from portal_uft import _
 from portal_uft import validators
 from zope import schema
 from zope.interface import implementer
+from zope.interface import invariant
 
 
 class IPerson(Schema):
@@ -20,7 +21,6 @@ class IPerson(Schema):
     email = Email(
         title=_("person_email", default="E-mail"),
         required=True,
-        constraint=validators.is_valid_email,
     )
 
     extension = schema.TextLine(
@@ -30,6 +30,15 @@ class IPerson(Schema):
         required=False,
         constraint=validators.is_valid_extension,
     )
+
+    @invariant
+    def validate_email(data):
+        """Validate email set by the user."""
+        value = data.email
+        if not (value and validators.is_valid_email(value)):
+            raise validators.BadValue(
+                f"The email {value} is not in the uft.edu.br domain."
+            )
 
 
 @implementer(IPerson)
