@@ -25,4 +25,15 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="portal_uft:default"
+      source="20220622003"
+      destination="20220623001"
+      >
+    <genericsetup:upgradeDepends
+        title="Apply contact_info behavior to a Person"
+        import_steps="typeinfo"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>

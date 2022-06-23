@@ -27,6 +27,7 @@
   <property name="add_permission">cmf.AddPortalContent</property>
   <property name="klass">portal_uft.content.person.Person</property>
   <property name="behaviors">
+    <element value="portal_uft.contact_info" />
     <element value="plone.shortname" />
     <element value="plone.leadimage" />
     <element value="plone.namefromtitle" />

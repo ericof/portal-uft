@@ -1,6 +1,5 @@
 """A Person profile in the site."""
 from plone.dexterity.content import Container
-from plone.schema.email import Email
 from plone.supermodel.model import Schema
 from portal_uft import _
 from portal_uft import validators
@@ -16,19 +15,6 @@ class IPerson(Schema):
 
     description = schema.Text(
         title=_("person_description", default="Biography"), required=False
-    )
-
-    email = Email(
-        title=_("person_email", default="E-mail"),
-        required=True,
-    )
-
-    extension = schema.TextLine(
-        title=_(
-            "Extension",
-        ),
-        required=False,
-        constraint=validators.is_valid_extension,
     )
 
     @invariant
