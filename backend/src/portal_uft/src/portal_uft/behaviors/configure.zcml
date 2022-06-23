@@ -5,10 +5,10 @@
     >
 
   <plone:behavior
-    name="portal_uft.contact_info"
-    title="Contact Information"
-    description="Add e-mail and extension fields to a contact."
-    provides=".contact_info.IContactInfo"
-    />
+      name="portal_uft.contact_info"
+      title="Contact Information"
+      description="Add e-mail and extension fields to a contact."
+      provides=".contact_info.IContactInfo"
+      />
 
 </configure>

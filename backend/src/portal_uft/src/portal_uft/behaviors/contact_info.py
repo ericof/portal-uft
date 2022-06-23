@@ -1,7 +1,7 @@
-from portal_uft import _
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.schema.email import Email
 from plone.supermodel import model
+from portal_uft import _
 from zope import schema
 from zope.interface import provider
 
