@@ -18,3 +18,9 @@ def added(obj: Campus, event: ObjectAddedEvent):
     """A new Campus was added to the site."""
     # Atualiza tags do objeto
     _update_tags(obj)
+
+
+def modified(obj: Campus, event: ObjectModifiedEvent):
+    """A Campus object was modified."""
+    # Atualiza tags do objeto
+    _update_tags(obj)
