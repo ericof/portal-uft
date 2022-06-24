@@ -42,6 +42,7 @@ class CampusIntegrationTest(unittest.TestCase):
             type=self.portal_type,
             title="Palmas",
             description="Campus da UFT em Palmas",
+            city="Palmas",
             email="palmas@uft.edu.br",
             extension="2022",
         )
