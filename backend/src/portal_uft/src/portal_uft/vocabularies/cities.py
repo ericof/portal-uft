@@ -8,6 +8,7 @@ CITIES = [
     ["palmas", "Palmas"],
     ["araguaina", "Araguaína"],
     ["gurupi", "Gurupi"],
+    ["porto-nacional", "Porto Nacional"],
 ]
 
 
