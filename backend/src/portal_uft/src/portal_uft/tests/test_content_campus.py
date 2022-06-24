@@ -59,4 +59,4 @@ class CampusIntegrationTest(unittest.TestCase):
             email="palmas@uft.edu.br",
             extension="2022",
         )
-        self.assertIn("Campus: palmas", obj.subject)
+        self.assertIn("Campus: Palmas", obj.subject)
