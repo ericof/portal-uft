@@ -5,4 +5,7 @@
   <object meta_type="Dexterity FTI"
           name="person"
   />
+  <object meta_type="Dexterity FTI"
+          name="campus"
+  />
 </object>
