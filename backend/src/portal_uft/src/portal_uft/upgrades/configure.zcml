@@ -47,4 +47,16 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="portal_uft:default"
+      source="20220623002"
+      destination="20220623003"
+      >
+    <genericsetup:upgradeDepends
+        title="Apply contact_info behavior to Campus"
+        import_steps="typeinfo"
+        />
+  </genericsetup:upgradeSteps>
+
+
 </configure>

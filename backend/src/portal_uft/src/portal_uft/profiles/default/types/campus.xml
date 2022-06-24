@@ -28,6 +28,7 @@
   <property name="klass">portal_uft.content.campus.Campus</property>
   <property name="behaviors">
     <element value="plone.dublincore" />
+    <element value="portal_uft.contact_info" />
     <element value="plone.shortname" />
     <element value="plone.leadimage" />
     <element value="plone.namefromtitle" />
