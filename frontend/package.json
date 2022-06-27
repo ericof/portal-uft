@@ -138,7 +138,7 @@
     "node": "^12 || ^14 || ^16"
   },
   "dependencies": {
-    "@plone/volto": "15.12.1",
+    "@plone/volto": "16.0.0-alpha.11",
     "volto-slate": "*",
     "@eeacms/volto-accordion-block": "*",
     "@kitconcept/volto-blocks-grid": "*",
