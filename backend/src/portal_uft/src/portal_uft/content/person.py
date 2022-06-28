@@ -1,7 +1,10 @@
 """A Person profile in the site."""
+from plone.app.vocabularies.catalog import StaticCatalogVocabulary
 from plone.dexterity.content import Container
 from plone.supermodel.model import Schema
 from portal_uft import _
+from z3c.relationfield.schema import RelationChoice
+from z3c.relationfield.schema import RelationList
 from zope import schema
 from zope.interface import implementer
 from zope.interface import invariant
@@ -14,6 +17,18 @@ class IPerson(Schema):
 
     description = schema.Text(
         title=_("person_description", default="Biography"), required=False
+    )
+
+    campus = RelationList(
+        title=_("person_campus", default="Campus"),
+        required=False,
+        default=[],
+        value_type=RelationChoice(
+            title=_("person_campus", default="Campus"),
+            vocabulary=StaticCatalogVocabulary(
+                {"portal_type": ["campus"], "review_state": "published"}
+            ),
+        ),
     )
 
     @invariant
