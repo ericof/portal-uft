@@ -7,6 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Image } from 'semantic-ui-react';
 import EmailWidget from '@plone/volto/components/theme/Widgets/EmailWidget';
+import PersonList from '@package/components/PersonList/PersonList';
 
 const PreviewImage = ({ content }) => {
   const { image, image_caption } = content;
@@ -67,6 +68,10 @@ const CampusView = (props) => {
             {content.extension && <div>Ramal: {content.extension}</div>}
           </div>
         </div>
+      </div>
+      <h2>People</h2>
+      <div>
+        <PersonList items={content.persons} />
       </div>
     </div>
   );
