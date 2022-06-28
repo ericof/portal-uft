@@ -5,7 +5,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { List } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
+import { Icon, UniversalLink } from '@plone/volto/components';
+import userIcon from '@plone/volto/icons/user.svg';
 
 /**
  * PersonSummary view component class.
@@ -15,15 +17,15 @@ import { List } from 'semantic-ui-react';
  */
 const PersonSummary = (props) => {
   const { content } = props;
-
+  const url = content['@id'];
   return (
-    <List.Item>
-      <List.Icon name="user" size="large" verticalAlign="middle" />
-      <List.Content>
-        <List.Header>{content.title}</List.Header>
-        <List.Description>{content.description}</List.Description>
-      </List.Content>
-    </List.Item>
+    <Card>
+      <Icon name={userIcon} />
+      <Card.Header>
+        <UniversalLink href={url}>{content.title}</UniversalLink>
+      </Card.Header>
+      <Card.Description>{content.description}</Card.Description>
+    </Card>
   );
 };
 

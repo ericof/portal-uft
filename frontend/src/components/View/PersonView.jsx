@@ -7,6 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EmailWidget from '@plone/volto/components/theme/Widgets/EmailWidget';
 import { Image } from 'semantic-ui-react';
+import { UniversalLink } from '@plone/volto/components';
 
 /**
  * PersonView view component class.
@@ -61,7 +62,9 @@ const PersonView = (props) => {
       <div>
         <ul>
           {content.campus.map((item) => (
-            <li>{item.title}</li>
+            <li>
+              <UniversalLink href={item['@id']}>{item.title}</UniversalLink>
+            </li>
           ))}
         </ul>
       </div>

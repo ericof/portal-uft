@@ -5,7 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { List } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
 import PersonSummary from './PersonSummary';
 
 /**
@@ -18,11 +18,11 @@ const PersonList = (props) => {
   const { items } = props;
 
   return (
-    <List>
+    <Card.Group>
       {items.map((item) => (
         <PersonSummary content={item} />
       ))}
-    </List>
+    </Card.Group>
   );
 };
 
