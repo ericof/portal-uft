@@ -1,3 +1,15 @@
-<configure xmlns="http://namespaces.zope.org/zope">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    >
+
+  <plone:service
+      method="GET"
+      factory=".roster.RosterGet"
+      for="portal_uft.content.campus.ICampus"
+      permission="zope2.View"
+      name="@roster"
+      />
+
 
 </configure>
