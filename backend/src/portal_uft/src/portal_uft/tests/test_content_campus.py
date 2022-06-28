@@ -90,3 +90,30 @@ class CampusIntegrationTest(unittest.TestCase):
         obj.city = "araguaina"
         notify(ObjectModifiedEvent(obj))
         self.assertIn("Campus: Araguaína", obj.subject)
+
+    def test_back_relation_person(self):
+        campus = api.content.create(
+            container=self.portal,
+            type=self.portal_type,
+            title="Palmas",
+            description="Campus da UFT em Palmas",
+            email="palmas@uft.edu.br",
+            city="palmas",
+            extension="2022",
+        )
+        api.content.transition(campus, "publish")
+        person = api.content.create(
+            container=self.portal,
+            type="person",
+            title="Alex Limi",
+            description="Plone Founder",
+            email="limi@uft.edu.br",
+            extension="1999",
+        )
+        api.relation.create(source=person, target=campus, relationship="campus")
+        self.assertEqual(
+            campus.persons(),
+            [
+                person,
+            ],
+        )
