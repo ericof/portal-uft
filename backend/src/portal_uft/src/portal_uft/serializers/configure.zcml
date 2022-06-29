@@ -1,3 +1,4 @@
 <configure xmlns="http://namespaces.zope.org/zope">
   <adapter factory=".campus.CampusSerializer" />
+  <adapter factory=".person.PersonSerializer" />
 </configure>
