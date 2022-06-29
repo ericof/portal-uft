@@ -73,3 +73,23 @@ add_to_plone(
         "description": "Lista de Campus da UFT",
     },
 )
+
+# Create campus Palmas e Araguaína
+contents = [
+    # id, title, city
+    ("palmas", "Palmas", "palmas"),
+    ("araguaina", "Araguaína", "araguaina"),
+]
+
+for id_, title, city in contents:
+    add_to_plone(
+        path="/campus",
+        payload={
+            "@type": "campus",
+            "id": id_,
+            "title": title,
+            "description": f"Campus da UFT em {title}",
+            "city": city,
+            "email": f"{city}@uft.edu.br",
+        },
+    )
