@@ -84,5 +84,15 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="portal_uft:default"
+      source="20220630001"
+      destination="20220630002"
+      >
+    <genericsetup:upgradeDepends
+        title="Altera o workflow do tipo Person"
+        import_steps="workflow"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>
