@@ -58,5 +58,15 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="portal_uft:default"
+      source="20220623003"
+      destination="20220629001"
+      >
+    <genericsetup:upgradeDepends
+        title="Add index and column to catalog"
+        import_steps="catalog"
+        />
+  </genericsetup:upgradeSteps>
 
 </configure>

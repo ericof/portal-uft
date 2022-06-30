@@ -25,8 +25,9 @@ class Campus(Container):
 
     def persons(self) -> List[Person]:
         """Return a list of persons connected to this Campus."""
+        uuid = api.content.get_uuid(self)
         persons = [
-            rel.from_object
-            for rel in api.relation.get(target=self, relationship="campus")
+            result.getObject()
+            for result in api.content.find(campus=uuid, portal_type="person")
         ]
         return persons
