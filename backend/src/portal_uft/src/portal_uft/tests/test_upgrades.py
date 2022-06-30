@@ -1,4 +1,5 @@
 """Upgrades tests for this package."""
+from parameterized import parameterized
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from portal_uft.testing import PORTAL_UFT_INTEGRATION_TESTING  # noqa: E501
@@ -11,9 +12,6 @@ class UpgradeStepIntegrationTest(unittest.TestCase):
 
     layer = PORTAL_UFT_INTEGRATION_TESTING
     profile = "portal_uft:default"
-    src = ""
-    dst = ""
-    steps = 1
 
     def setUp(self):
         self.portal = self.layer["portal"]
@@ -24,78 +22,25 @@ class UpgradeStepIntegrationTest(unittest.TestCase):
         source, dest = tuple([source]), tuple([dest])
         return item["source"] == source and item["dest"] == dest
 
-    def available_steps(self) -> list:
+    def available_steps(self, src: str, dst: str) -> list:
         """Test available steps."""
-        steps = listUpgradeSteps(self.setup, self.profile, self.src)
-        steps = [s for s in steps if self._match(s[0], self.src, self.dst)]
+        steps = listUpgradeSteps(self.setup, self.profile, src)
+        steps = [s for s in steps if self._match(s[0], src, dst)]
         return steps
 
-    def test_available(self):
+    @parameterized.expand(
+        [
+            ("20220622001", "20220622002", 1),
+            ("20220622002", "20220622003", 1),
+            ("20220622003", "20220623001", 1),
+            ("20220623001", "20220623002", 1),
+            ("20220623002", "20220623003", 1),
+            ("20220623003", "20220629001", 1),
+            ("20220629001", "20220630001", 1),
+            ("20220630001", "20220630002", 1),
+        ]
+    )
+    def test_available(self, src, dst, expected):
         """Test upgrade step is available."""
-        if self.src and self.dst:
-            steps = self.available_steps()
-            self.assertEqual(len(steps), 1)
-
-
-class V20220622001UpgradeTest(UpgradeStepIntegrationTest):
-    """Test upgrade step from version 20220622001."""
-
-    src = "20220622001"
-    dst = "20220622002"
-    steps = 1
-
-
-class V20220622002UpgradeTest(UpgradeStepIntegrationTest):
-    """Test upgrade step from version 20220622002."""
-
-    src = "20220622002"
-    dst = "20220622003"
-    steps = 1
-
-
-class V20220622003UpgradeTest(UpgradeStepIntegrationTest):
-    """Test upgrade step from version 20220622003."""
-
-    src = "20220622003"
-    dst = "20220623001"
-    steps = 1
-
-
-class V20220623001UpgradeTest(UpgradeStepIntegrationTest):
-    """Test upgrade step from version 20220623001."""
-
-    src = "20220623001"
-    dst = "20220623002"
-    steps = 1
-
-
-class V20220623002UpgradeTest(UpgradeStepIntegrationTest):
-    """Test upgrade step from version 20220623002."""
-
-    src = "20220623002"
-    dst = "20220623003"
-    steps = 1
-
-
-class V20220623003UpgradeTest(UpgradeStepIntegrationTest):
-    """Test upgrade step from version 20220623003."""
-
-    src = "20220623003"
-    dst = "20220629001"
-    steps = 1
-
-
-class V20220629001UpgradeTest(UpgradeStepIntegrationTest):
-    """Test upgrade step from version 20220629001."""
-
-    src = "20220629001"
-    dst = "20220630001"
-    steps = 1
-
-
-class V20220630001UpgradeTest(UpgradeStepIntegrationTest):
-    """Test upgrade step from version 20220630001."""
-
-    src = "20220630001"
-    dst = "20220630002"
-    steps = 1
+        steps = self.available_steps(src, dst)
+        self.assertEqual(len(steps), expected)
