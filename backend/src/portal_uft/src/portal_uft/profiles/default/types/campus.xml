@@ -24,7 +24,7 @@
     <element value="view" />
   </property>
   <property name="default_view_fallback">False</property>
-  <property name="add_permission">cmf.AddPortalContent</property>
+  <property name="add_permission">portal_uft.AddCampus</property>
   <property name="klass">portal_uft.content.campus.Campus</property>
   <property name="behaviors">
     <element value="plone.dublincore" />

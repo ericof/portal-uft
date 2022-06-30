@@ -1,0 +1,10 @@
+<rolemap>
+  <permissions>
+    <permission acquire="True"
+                name="portal_uft: Add Campus"
+    >
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
+  </permissions>
+</rolemap>

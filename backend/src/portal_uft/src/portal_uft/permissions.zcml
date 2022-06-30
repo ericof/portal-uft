@@ -6,7 +6,10 @@
 
   <configure zcml:condition="installed AccessControl.security">
     <!-- -*- extra stuff goes here -*- -->
-
+    <permission
+        id="portal_uft.AddCampus"
+        title="portal_uft: Add Campus"
+        />
   </configure>
 
 </configure>
