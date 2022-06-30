@@ -32,6 +32,13 @@ export default function applyConfig(config) {
     person: PersonView,
     ...config.views.contentTypesViews,
   };
+  config.blocks.groupBlocksOrder = [
+    { id: 'mostUsed', title: 'Most used' },
+    { id: 'uft', title: 'UFT' },
+    { id: 'text', title: 'Text' },
+    { id: 'media', title: 'Media' },
+    { id: 'common', title: 'Common' },
+  ];
   config.blocks.blocksConfig = {
     ...config.blocks.blocksConfig,
     ...blocks,
