@@ -30,6 +30,16 @@ msgstr ""
 "Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8\n"
 
+#: components/Blocks/CampusBlock/schema
+# defaultMessage: Campus
+msgid "Campus"
+msgstr ""
+
+#: components/Blocks/CampusBlock/schema
+# defaultMessage: Campus Block
+msgid "Campus Block"
+msgstr ""
+
 #: components/Blocks/PersonBlock/schema
 # defaultMessage: Person
 msgid "Person"

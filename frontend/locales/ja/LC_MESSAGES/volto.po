@@ -18,6 +18,16 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "X-Is-Fallback-For: ja-jp\n"
 
+#: components/Blocks/CampusBlock/schema
+# defaultMessage: Campus
+msgid "Campus"
+msgstr ""
+
+#: components/Blocks/CampusBlock/schema
+# defaultMessage: Campus Block
+msgid "Campus Block"
+msgstr ""
+
 #: components/Blocks/PersonBlock/schema
 # defaultMessage: Person
 msgid "Person"

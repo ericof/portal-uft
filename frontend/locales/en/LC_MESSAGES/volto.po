@@ -11,6 +11,16 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#: components/Blocks/CampusBlock/schema
+# defaultMessage: Campus
+msgid "Campus"
+msgstr ""
+
+#: components/Blocks/CampusBlock/schema
+# defaultMessage: Campus Block
+msgid "Campus Block"
+msgstr ""
+
 #: components/Blocks/PersonBlock/schema
 # defaultMessage: Person
 msgid "Person"
