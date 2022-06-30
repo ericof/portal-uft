@@ -17,4 +17,12 @@ msgstr ""
 "Language-Name: Romanian\n"
 "Preferred-Encodings: utf-8 latin1\n"
 
+#: components/Blocks/PersonBlock/schema
+# defaultMessage: Person
+msgid "Person"
+msgstr ""
 
+#: components/Blocks/PersonBlock/schema
+# defaultMessage: Person Block
+msgid "Person Block"
+msgstr ""

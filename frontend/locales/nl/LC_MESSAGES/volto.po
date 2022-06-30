@@ -30,4 +30,12 @@ msgstr ""
 "Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8\n"
 
+#: components/Blocks/PersonBlock/schema
+# defaultMessage: Person
+msgid "Person"
+msgstr ""
 
+#: components/Blocks/PersonBlock/schema
+# defaultMessage: Person Block
+msgid "Person Block"
+msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-27 19:03+0000\n"
+"POT-Creation-Date: 2022-06-30 19:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,8 +87,13 @@ msgid "Uninstall Portal UFT setup."
 msgstr "Desinstala a configuração do Portal UFT"
 
 #. Default: "City"
-#: portal_uft/content/campus.py:13
+#: portal_uft/content/campus.py:16
 msgid "city"
+msgstr ""
+
+#. Default: "Campus"
+#: portal_uft/content/person.py:20
+msgid "person_campus"
 msgstr ""
 
 #. Default: "Biography"
