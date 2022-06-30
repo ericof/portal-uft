@@ -34,7 +34,7 @@ class TestSetup(unittest.TestCase):
         """Test latest version of default profile."""
         self.assertEqual(
             self.setup.getLastVersionForProfile("portal_uft:default")[0],
-            "20220629001",
+            "20220630001",
         )
 
 
