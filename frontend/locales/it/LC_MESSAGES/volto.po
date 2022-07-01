@@ -30,3 +30,13 @@ msgstr ""
 # defaultMessage: Person Block
 msgid "Person Block"
 msgstr ""
+
+#: components/Blocks/Twitter/schema
+# defaultMessage: Twitter
+msgid "Twitter"
+msgstr ""
+
+#: components/Blocks/Twitter/schema
+# defaultMessage: URL
+msgid "URL"
+msgstr ""
