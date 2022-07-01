@@ -4,3 +4,4 @@
  * @example
  * export { Api } from './Api/Api';
  */
+export { extractTweetId } from './Twitter/Twitter';
